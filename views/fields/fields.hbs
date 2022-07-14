@@ -1,0 +1,28 @@
+<h1>Soccer Fields</h1>
+    <div class="text-right mb-2">
+        <a href="/fields/create" class="btn btn-primary btn-sm btn btn-light btn-outline-secondary">Add a new soccer field!</a>
+    </div>
+
+
+{{#each allFields}}
+    <div class="card mb-3" style="width: 18rem;">
+        <img src = "{{imageUrl}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{fieldname}}</h5>
+            <p class="card-text">{{address}}</p>
+        </div>
+    <div class="card-body mx-auto">
+        <a href="/fields/detail/{{_id}}" class="btn btn-primary stretched-link btn-sm btn btn-light btn-outline-secondary">Details</a>
+    </div>
+    </div>
+{{/each}}
+
+
+{{!-- {{#each allFields}}
+<h3>{{fieldname}}</h3>
+<p>{{address}}</p>
+<p>{{hours}}</p>
+<p>{{contact}}</p>
+<a href="/books/{{_id}}">See details</a>
+{{/each}}
+ --}}

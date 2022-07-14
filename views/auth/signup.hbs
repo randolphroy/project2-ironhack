@@ -1,0 +1,49 @@
+{{!-- <div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body p-3">
+          <h5 class="card-ti">Create Account</h5> --}}
+   
+<div id="form">
+  <h2>Create Account</h2>
+  <form action="/signup" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
+
+  <label>Profile Image
+      <input type="file" name="profile-image"/>
+  </label>
+
+  <label> Username
+    <input type="text" name="username" placeholder="ironhacker" />
+  </label>
+
+  <label> Email
+    <input type="email" name="email" placeholder="rockstar@ironhack.com" />
+  </label>
+    
+  <label> Favorite Position
+    <input type="text" name="position" placeholder="ironhacker" />
+  </label>
+        
+  <label> City
+    <input type="text" name="city" placeholder="ironhacker" />
+  </label>
+  
+  <label> State
+    <input type="text" name="state" placeholder="ironhacker" />
+  </label>
+
+  <label> Password
+    <input type="password" name="password" placeholder="********" />
+  </label>
+
+    <button type="submit">Create account</button>
+    {{!-- error message will be added here --}}
+  </form>
+</div>
+
+{{!--         </div>
+      </div>
+    </div>
+  </div>
+</div> --}}

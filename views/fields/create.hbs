@@ -1,0 +1,88 @@
+{{!-- <div class="row">
+<div id="form">
+  <h1 class="text-center">Add new field</h1>
+  <form action="/fields" method="POST" enctype="multipart/form-data">
+
+    <label>Field Image
+      <input type="file" name="field-image"/>
+    </label>
+
+    <label> Field Name
+      <input type="text" name="fieldname" placeholder="Field Name" />
+    </label>
+
+    <label> Address
+      <input type="text" name="address" placeholder="123 Anywhere ave, City, State, Zip Code" />
+    </label>
+
+    <label> Hours of operation
+      <input type="text" name="hours" placeholder="12:00am to 12:00pm" />
+    </label>
+
+    <label> Contact information
+      <input type="text" name="contact" placeholder="305.888.8888" />
+    </label>
+
+    <button type="submit">Submit new field</button>
+
+    <a href="/fields/">All Soccer Fields</a>
+
+    {{!-- error message will be added here --}}
+  </form>
+</div>
+</div>--}}
+
+
+<div class="row">
+    <h1 class="text-center">Add new field</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/fields" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="fieldname">Field Name</label>
+                <input class="form-control" type="text" name="fieldname" placeholder="Field Name" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="address">Address</label>
+                <textarea class="form-control" type="text" name="address" placeholder="123 Anywhere ave, City, State, Zip Code"required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="hours">Hours of Operation</label>
+                <input class="form-control" type="text" name="hours" placeholder="12:00am to 12:00pm" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="contact">Contact Information</label>
+                <input class="form-control" type="text" name="contact" placeholder="888.888.8888" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="field-image" multiple>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">Submit new field</button>
+            </div>
+        </form>
+        <a href="/fields/">All Soccer Fields</a>
+    </div>
+</div>

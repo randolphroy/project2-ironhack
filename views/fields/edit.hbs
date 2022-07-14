@@ -1,0 +1,32 @@
+<div id="form">
+  <h2>Edit this soccer field: {{fieldname}}</h2>
+
+  <form action="/fields/detail/edit/{{_id}}" method="POST" enctype="multipart/form-data">
+
+    <label>Field Image
+      <input type="file" name="field-image"/>
+    </label>
+    
+    <label> Field Name
+      <input type="text" name="fieldname" value="{{fieldname}}" />
+    </label>
+
+    <label> Address
+      <input type="text" name="address" value="{{address}}" />
+    </label>
+
+    <label> Hours of operation
+      <input type="text" name="hours" value="{{hours}}" />
+    </label>
+
+    <label> Contact information
+      <input type="text" name="contact" value="{{contact}}" />
+    </label>
+
+    <button type="submit">Update soccer field</button>
+    <a href="/fields/">All Soccer Fields</a>
+
+    {{!-- error message will be added here --}}
+  </form>
+</div>
+

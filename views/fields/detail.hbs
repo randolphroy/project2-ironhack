@@ -1,0 +1,17 @@
+<h1>Soccer Field Details</h1>
+
+ <div class="card" style="width: 40rem;">
+  <img src = "{{imageUrl}}" class="card-img-top" alt="...">
+  <div class="card-body mb-3">
+    <h5 class="card-title">{{fieldname}}</h5>
+    <p>{{address}}</p>
+    <p>{{hours}}</p>
+    <p>{{contact}}</p>
+    <p>{{reviews}}</p>
+    <a href="/fields/">All Soccer Fields</a>
+    <a href="/fields/detail/edit/{{_id}} ">Edit Soccer Field</a>
+  </div>
+  <form action="/fields/{{_id}}/delete" method="POST">
+      <button>Delete</button>
+  </form>
+</div>
