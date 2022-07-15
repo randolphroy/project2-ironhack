@@ -1,8 +1,10 @@
-<h1>Soccer Field Details</h1>
+<h1 class="text-center">Soccer Field Details</h1>
 
- <div class="card" style="width: 40rem;">
-  <img src = "{{imageUrl}}" class="card-img-top" alt="...">
+<div class="card text-center mb-5">
   <div class="card-body mb-3">
+  <img src="{{imageUrl}}" class="card-img-top" alt="...">
+  </div>
+  <div class="card-body">
     <h5 class="card-title">{{fieldname}}</h5>
     <p>{{address}}</p>
     <p>{{hours}}</p>
@@ -11,7 +13,9 @@
     <a href="/fields/">All Soccer Fields</a>
     <a href="/fields/detail/edit/{{_id}} ">Edit Soccer Field</a>
   </div>
+  <div class="mb-2">
   <form action="/fields/{{_id}}/delete" method="POST">
-      <button>Delete</button>
+    <button>Delete</button>
   </form>
+  </div>
 </div>
